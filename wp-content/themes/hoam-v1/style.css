@@ -1,0 +1,50 @@
+/*
+Theme Name: HOAM 0.1
+Theme URI:
+Author: Elliot Toman
+Author URI: https://www.asubtleweb.com
+Description: A single-page theme for HOAM by Elliot Toman
+Version: 1.0
+License: 
+License URI: 
+Tags: 
+Text Domain: 
+*/
+
+@import url('assets/css/base.css');
+@import url('assets/css/tablet.css');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.asw .has-white-color { color: white; }
+.asw .has-white-background-color { background-color: white; }
+.asw .has-black-color { color: black; }
+.asw .has-black-background-color { background-color: black; }
+.asw .has-light-blue-color { color: #D5E2E9; }
+
+@media screen and ( max-width: 781px ) {
+    .asw .wp-block-columns {
+        display: block;
+    }
+}
+
+@media screen and ( min-width: 600px ) and ( max-width: 781px ) {
+    .asw .wp-block-column:nth-child(2n) {
+        margin-left: 0;
+    }
+}
+
+
+
