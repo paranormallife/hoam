@@ -1,0 +1,16 @@
+.hero-image .img {
+    height: auto;
+    width: 100%;
+}
+
+.offset {
+    margin-top: -5rem;
+}
+
+.logo img {
+    max-width: 50vw;
+}
+
+h1, h2 {
+    font-family: 'Anton', sans-serif;
+}
