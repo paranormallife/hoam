@@ -12,5 +12,19 @@
 }
 
 h1, h2 {
+    display: block;
     font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.post-content {
+    margin: 0 auto;
+    max-width: calc( 100% - 2rem );
+    width: 100%;
+}
+
+.page-title span {
+    font-size: 1rem;
 }

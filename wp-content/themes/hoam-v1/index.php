@@ -13,7 +13,9 @@
                 echo        '<img src="'.$thumb.'" alt="'.get_the_title().'" />';
                 echo    '</div>';
                 echo '</div>';
-                echo '<div class="post-content">'.the_content().'</div>';
+                echo '<div class="post-content">';
+                        the_content();
+                echo '</div>';
             } 
         } 
     ?>
