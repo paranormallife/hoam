@@ -12,10 +12,14 @@ Text Domain:
 */
 
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Taviraj:500,500i,700&display=swap');
 @import url('assets/css/base.css');
 @import url('assets/css/tablet.css');
 
-
+:root {
+    --purple: #40095A;
+    --gold: #EA9713;
+}
 
 * {
     box-sizing: border-box;
@@ -33,7 +37,10 @@ img {
 .asw .has-white-background-color { background-color: white; }
 .asw .has-black-color { color: black; }
 .asw .has-black-background-color { background-color: black; }
-.asw .has-light-blue-color { color: #D5E2E9; }
+.asw .has-purple-color { color: var(--purple); }
+.asw .has-purple-background-color { background-color: var(--purple); }
+.asw .has-gold-color { color: var(--gold); }
+.asw .has-gold-background-color { background-color: var(--gold); }
 
 @media screen and ( max-width: 781px ) {
     .asw .wp-block-columns {

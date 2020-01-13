@@ -1,10 +1,44 @@
-.hero-image .img {
+body {
+    font: 500 1rem 'Taviraj', serif;
+}
+
+a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.hero-image {
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    max-height: 66.6vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.hero-image img {
     height: auto;
+    width: 100%;
+    visibility: hidden;
+}
+
+.hero-image .title {
+    align-items: center;
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
     width: 100%;
 }
 
-.offset {
-    margin-top: -5rem;
+.logo {
+    margin-top: -3rem;
 }
 
 .logo img {
@@ -25,6 +59,80 @@ h1, h2 {
     width: 100%;
 }
 
+.post-content h2,
+.post-content p {
+    margin-bottom: 1rem;
+}
+
 .page-title span {
     font-size: 1rem;
+}
+
+.asw .full-width {
+    margin-left: -1rem;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.asw .wp-block-quote {
+    border: 0;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 1rem;
+}
+
+.donation-form {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.asw .pswp__caption h4 {
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: normal;
+}
+
+footer {
+    background-color: var(--purple);
+    color: white;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-social {
+    display: block;
+    margin: 1rem auto;
+    max-width: calc( 100% - 2rem );
+    text-align: center;
+    width: 100%;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.asw span.dgwt-jg-caption__font--14 {
+    display: none;
+}
+
+.asw .dgwt-jg-caption span.dgwt-jg-caption__font--14 {
+    display: none;
+}
+
+.asw .dgwt-jg-effect-standard .dgwt-jg-caption {
+    background-color: var(--gold);
+    mix-blend-mode: multiply;
 }

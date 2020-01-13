@@ -1,5 +1,14 @@
-@media screen and ( min-width: 1080px ) {
+@media screen and ( min-width: 800px ) {
 
-    
+    .post-content h2,
+    .post-content p {
+        margin: 0 auto 1rem auto;
+        max-width: 600px;
+    }
+
+    .asw .wp-block-dgwt-justified-gallery {
+        margin: 0 auto;
+        max-width: 800px;
+    }
 
 }

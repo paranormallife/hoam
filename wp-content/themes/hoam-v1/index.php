@@ -11,6 +11,7 @@
                 echo '<div class="hero-container">';
                 echo    '<div class="hero-image" style="background-image: url('.$thumb.');">';
                 echo        '<img src="'.$thumb.'" alt="'.get_the_title().'" />';
+                echo        '<span class="title"><h1>'.get_the_title().'</h1></span>';
                 echo    '</div>';
                 echo '</div>';
                 echo '<div class="post-content">';

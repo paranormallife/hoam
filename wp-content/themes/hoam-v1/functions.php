@@ -36,7 +36,14 @@ function asw_register_taxonomies() {
 
 function asw_widgets_init() {
 
-	/* No Widgets */
+	register_sidebar( array(
+		'name'          => 'Home Sections',
+		'id'            => 'home_sections',
+		'before_widget' => '<section class="home-section">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
 
 }
 add_action( 'widgets_init', 'asw_widgets_init' );
@@ -45,33 +52,7 @@ add_action( 'widgets_init', 'asw_widgets_init' );
 
 function asw_register_custom_types() {
 	
-// FRONT PAGE HEADER/BANNER
-register_post_type(
-		'homepage_images', array(
-			'labels' => array(
-				'name' => 'Homepage Images', 
-				'singular_name' => 'Homepage Image', 
-				'add_new' => 'Add new Homepage Image', 
-				'add_new_item' => 'Add new Homepage Image', 
-				'new_item' => 'New Homepage Image', 
-				'view_item' => 'View Homepage Images',
-				'edit_item' => 'Edit Homepage Image',
-				'not_found' =>  __('No Homepage Images found'),
-				'not_found_in_trash' => __('No Homepage Images found in Trash')
-			), 
-			'menu_icon' => 'dashicons-camera',
-			'public' => true,
-			'publicly_queryable' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'rewrite' => true,
-			'capability_type' => 'page',
-			'exclude_from_search' => true, // If this is set to TRUE, Taxonomy pages won't work.
-			'hierarchical' => false,
-			'menu_position' => null,
-			'supports' => array('title', 'thumbnail', 'excerpt')
-		)
-	);
+// No custom post types right now.
 
 	flush_rewrite_rules();
 }
@@ -92,19 +73,22 @@ function mytheme_setup() {
 			'color' => '#FFF',
 		),
 		array(
-			'name' => __( 'Light Blue' ),
-			'slug' => 'light-blue',
-			'color' => '#D5E2E9',
+			'name' => __( 'Purple' ),
+			'slug' => 'purple',
+			'color' => 'var(--purple)',
 		),
 		array(
-			'name' => __( 'Dark Blue' ),
-			'slug' => 'dark-blue',
-			'color' => '#6B8293',
+			'name' => __( 'Gold' ),
+			'slug' => 'gold',
+			'color' => 'var(--gold)',
 		),
 	) );
 	add_theme_support( 'disable-custom-colors' );
 	add_theme_support('disable-custom-font-sizes');
 }
 add_action( 'after_setup_theme', 'mytheme_setup' );
+
+// Add Widgets
+include_once( get_template_directory() . '/widgets/parallax_section.php' );
 
 ?>
